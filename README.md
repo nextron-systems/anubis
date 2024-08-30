@@ -9,6 +9,10 @@
 - `notebooks`: Jupyter Notebooks including codes such as API connections and AI training/inference material.
 - `arduino_codes` : Arduino experiments with the board.
 
+### Files 
+
+- `mindmap.pdf` : Just how we thought about the project flow.
+
 ## What we need
 
 - [x] ESP32 Cam Module (the exact model will be added soon)

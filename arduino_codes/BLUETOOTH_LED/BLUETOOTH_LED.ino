@@ -17,7 +17,15 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if(serialBT.available(){
-    
+   command = serialBT.read(); 
+  }
+
+  if(command == '1'){
+    digitalWrite(LED_PIN, HIGH);
+  }
+
+  if(command == '0'){
+    digitalWrite(LED_PIN, LOW);
   }
 
 }

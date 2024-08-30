@@ -4,6 +4,8 @@
 
 ## Repository Guide
 
+- Notebooks: Jupyter Notebooks including codes such as API connections and AI training/inference material.
+
 ## What we need
 
 - [x] ESP32 Cam Module (the exact model will be added soon)

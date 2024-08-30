@@ -2,6 +2,8 @@
 
 <p align="center"><strong>AI Device Helping You Remember Your Best Memories</strong></p>
 
+## Repository Guide
+
 ## What we need
 
 - [x] ESP32 Cam Module (the exact model will be added soon)

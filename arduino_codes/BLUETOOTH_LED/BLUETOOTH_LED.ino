@@ -16,7 +16,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if(serialBT.available(){
+  if(serialBT.available()){
    command = serialBT.read(); 
   }
 

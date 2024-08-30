@@ -1,5 +1,7 @@
 #include "BluetoothSerial"
 
+#define LED_PIN 4
+
 
 BluetoothSerial serialBT;
 

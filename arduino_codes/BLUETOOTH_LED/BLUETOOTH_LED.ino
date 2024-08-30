@@ -7,7 +7,8 @@ BluetoothSerial serialBT;
 
 void setup() {
   // put your setup code here, to run once:
-
+  pinMode(LED_PIN, OUTPUT);
+  
   serialBT.begin("Anubis");
 
 }

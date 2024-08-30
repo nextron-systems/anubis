@@ -12,3 +12,4 @@
 - [x] Google Account (Just for colab notebooks, must of the codes can be executed on a local CPU machine as well.)
 - [x] An account on [Cloudflare](https://cloudflare.com)
 - [x] An account on [OpenRouter](https://openrouter.ai)
+- [x] Arduino IDE (Download from [Arduino](https://arduino.cc) website.)

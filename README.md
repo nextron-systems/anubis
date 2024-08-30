@@ -4,7 +4,10 @@
 
 ## Repository Guide
 
-- Notebooks: Jupyter Notebooks including codes such as API connections and AI training/inference material.
+### Folders
+
+- `notebooks`: Jupyter Notebooks including codes such as API connections and AI training/inference material.
+- `arduino_codes` : Arduino experiments with the board.
 
 ## What we need
 

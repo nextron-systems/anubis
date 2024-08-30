@@ -1,3 +1,3 @@
-# Anubis : AI Device Helping You Remember Your Best Memories
+# Anubis 
 
-This project is an _Open Source Hardware_ Project.
+<p align="center"><strong>AI Device Helping You Remember Your Best Memories</strong></p>

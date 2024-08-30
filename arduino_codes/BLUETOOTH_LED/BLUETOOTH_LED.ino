@@ -1,4 +1,4 @@
-#include "BluetoothSerial"
+#include "BluetoothSerial.h"
 
 #define LED_PIN 4
 

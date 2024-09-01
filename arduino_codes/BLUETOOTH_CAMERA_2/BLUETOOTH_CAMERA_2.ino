@@ -7,6 +7,8 @@ char command;
 BluetoothSerial serialBT;
 
 void setup() {
+
+  serialBT.begin("Anubis");
   
 }
 

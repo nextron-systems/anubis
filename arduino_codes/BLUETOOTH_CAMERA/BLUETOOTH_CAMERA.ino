@@ -34,7 +34,7 @@ camera_config_t config = {
 void setup() {
   
     Serial.begin(115200); // Start Serial communication
-    SerialBT.begin("ESP32Camera"); // Bluetooth device name
+    serialBT.begin("ESP32Camera"); // Bluetooth device name
     Serial.println("Bluetooth device is ready to pair");
 
     // Initialize the camera
@@ -47,8 +47,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (SerialBT.available()) { // Check if data is available
-        char incoming = SerialBT.read(); // Read the incoming data
+  if (serialBT.available()) { // Check if data is available
+        char incoming = serialBT.read(); // Read the incoming data
         Serial.print("Received: ");
         Serial.println(incoming);
 
@@ -56,8 +56,8 @@ void loop() {
             takePhoto();
         }
     }
-    delay(20); // Small delay for stabilityif (SerialBT.available()) { // Check if data is available
-        char incoming = SerialBT.read(); // Read the incoming data
+    delay(20); // Small delay for stabilityif (serialBT.available()) { // Check if data is available
+        char incoming = serialBT.read(); // Read the incoming data
         Serial.print("Received: ");
         Serial.println(incoming);
 
@@ -74,17 +74,17 @@ void takePhoto() {
     camera_fb_t *fb = esp_camera_fb_get();
     if (!fb) {
         Serial.println("Camera capture failed");
-        SerialBT.println("Camera capture failed");
+        serialBT.println("Camera capture failed");
         return;
     }
 
     // Send the image size to the Bluetooth terminal
-    SerialBT.printf("Photo taken! Size: %d bytes\n", fb->len);
+    serialBT.printf("Photo taken! Size: %d bytes\n", fb->len);
 
     // Optionally, you can send the image data over Bluetooth
     // Uncomment the following lines to send the image data
     
-    SerialBT.write(fb->buf, fb->len);
+    serialBT.write(fb->buf, fb->len);
     Serial.println("Photo data sent over Bluetooth");
     
 

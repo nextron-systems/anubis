@@ -7,12 +7,6 @@ void setup() {
     Serial.begin(115200);
     SerialBT.begin("ESP32Camera");
     Serial.println("Bluetooth device is ready to pair");
-
-    // Initialize the camera using the esp32cam library
-    if (!esp32cam::Camera.begin()) {
-        Serial.println("Camera initialization failed");
-        return;
-    }
 }
 
 void loop() {

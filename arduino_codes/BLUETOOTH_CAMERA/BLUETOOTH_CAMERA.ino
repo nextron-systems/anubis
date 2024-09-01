@@ -3,6 +3,8 @@
 
 BluetoothSerial serialBT;
 
+char command;
+
 camera_config_t config = {
     .pin_pwdn = -1,
     .pin_reset = -1,

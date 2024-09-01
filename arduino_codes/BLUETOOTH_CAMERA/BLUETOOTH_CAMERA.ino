@@ -3,8 +3,6 @@
 
 BluetoothSerial serialBT;
 
-char command;
-
 camera_config_t config = {
     .pin_pwdn = -1,
     .pin_reset = -1,
@@ -49,6 +47,25 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if (SerialBT.available()) { // Check if data is available
+        char incoming = SerialBT.read(); // Read the incoming data
+        Serial.print("Received: ");
+        Serial.println(incoming);
+
+        if (incoming == 'c') { // If 'c' is received, take a photo
+            takePhoto();
+        }
+    }
+    delay(20); // Small delay for stabilityif (SerialBT.available()) { // Check if data is available
+        char incoming = SerialBT.read(); // Read the incoming data
+        Serial.print("Received: ");
+        Serial.println(incoming);
+
+        if (incoming == 'c') { // If 'c' is received, take a photo
+            takePhoto();
+        }
+    }
+    delay(20); // Small delay for stability
 
 }
 

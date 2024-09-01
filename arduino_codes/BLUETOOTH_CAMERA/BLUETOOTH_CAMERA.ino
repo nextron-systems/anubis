@@ -55,10 +55,10 @@ void takePhoto() {
 
     // Optionally, you can send the image data over Bluetooth
     // Uncomment the following lines to send the image data
-    /*
+    
     SerialBT.write(fb->buf, fb->len);
     Serial.println("Photo data sent over Bluetooth");
-    */
+    
 
     // Return the frame buffer back to the driver
     esp_camera_fb_return(fb);

@@ -32,7 +32,16 @@ camera_config_t config = {
 
 
 void setup() {
-  // put your setup code here, to run once:
+  
+    Serial.begin(115200); // Start Serial communication
+    SerialBT.begin("ESP32Camera"); // Bluetooth device name
+    Serial.println("Bluetooth device is ready to pair");
+
+    // Initialize the camera
+    if (!esp_camera_init(&config)) {
+        Serial.println("Camera init failed");
+        return;
+    }
 
 }
 

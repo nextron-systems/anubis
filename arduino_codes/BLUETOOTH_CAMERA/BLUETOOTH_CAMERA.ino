@@ -30,6 +30,30 @@ camera_config_t config = {
 };
 
 
+void takePhoto() {
+    // Capture a frame
+    camera_fb_t *fb = esp_camera_fb_get();
+    if (!fb) {
+        Serial.println("Camera capture failed");
+        serialBT.println("Camera capture failed");
+        return;
+    }
+
+    // Send the image size to the Bluetooth terminal
+    serialBT.printf("Photo taken! Size: %d bytes\n", fb->len);
+
+    // Optionally, you can send the image data over Bluetooth
+    // Uncomment the following lines to send the image data
+    
+    serialBT.write(fb->buf, fb->len);
+    Serial.println("Photo data sent over Bluetooth");
+    
+
+    // Return the frame buffer back to the driver
+    esp_camera_fb_return(fb);
+}
+
+
 
 void setup() {
   
@@ -67,27 +91,4 @@ void loop() {
     }
     delay(20); // Small delay for stability
 
-}
-
-void takePhoto() {
-    // Capture a frame
-    camera_fb_t *fb = esp_camera_fb_get();
-    if (!fb) {
-        Serial.println("Camera capture failed");
-        serialBT.println("Camera capture failed");
-        return;
-    }
-
-    // Send the image size to the Bluetooth terminal
-    serialBT.printf("Photo taken! Size: %d bytes\n", fb->len);
-
-    // Optionally, you can send the image data over Bluetooth
-    // Uncomment the following lines to send the image data
-    
-    serialBT.write(fb->buf, fb->len);
-    Serial.println("Photo data sent over Bluetooth");
-    
-
-    // Return the frame buffer back to the driver
-    esp_camera_fb_return(fb);
 }

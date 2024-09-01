@@ -1,3 +1,6 @@
+#include "BluetoothSerial.h"
+#include "esp_camera.h"
+
 void setup() {
   // put your setup code here, to run once:
 

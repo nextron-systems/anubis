@@ -70,7 +70,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   if (serialBT.available()) { // Check if data is available
         char incoming = serialBT.read(); // Read the incoming data
         Serial.print("Received: ");
@@ -80,15 +79,5 @@ void loop() {
             takePhoto();
         }
     }
-    delay(20); // Small delay for stabilityif (serialBT.available()) { // Check if data is available
-        char incoming = serialBT.read(); // Read the incoming data
-        Serial.print("Received: ");
-        Serial.println(incoming);
-
-        if (incoming == 'c') { // If 'c' is received, take a photo
-            takePhoto();
-        }
-    }
     delay(20); // Small delay for stability
-
 }

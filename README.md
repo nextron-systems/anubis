@@ -5,6 +5,7 @@
 ## Updates 
 
 - September 1st, 2024: Just decided to add this section to the project. 
+- September 1st, 2024: Bluetooth photo taking failed, working on it.
 
 ## Repository Guide
 

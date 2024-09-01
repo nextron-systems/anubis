@@ -9,6 +9,7 @@
 - `notebooks`: Jupyter Notebooks including codes such as API connections and AI training/inference material.
 - `arduino_codes` : Arduino experiments with the board.
     - `LED` : Experimenting with LED on Pin 4. It was just a basic test, and not even worth sharing.
+    - `BLUETOOTH_LED` : Experimenting with bluetooth commands, turning the LED on or off using Bluetooth terminal.
 
 ### Files 
 

@@ -2,6 +2,10 @@
 
 <p align="center"><strong>AI Device Helping You Remember Your Best Memories</strong></p>
 
+## Updates 
+
+- September 1st, 2024: Just decided to add this section to the project. 
+
 ## Repository Guide
 
 ### Folders

@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char* ssid = "YOUR_SSID";
-const char* password = "YOUR_PASSWORD";
+const char* ssid = "Redmi";
+const char* password = "123456@Abcd";
 
 #define CAMERA_MODEL_AI_THINKER
 

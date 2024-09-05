@@ -74,6 +74,8 @@ void setup() {
   if (err != ESP_OK) {
     Serial.printf("Camera init failed with error 0x%x", err);
     return;
+  } else {
+    Serial.println("Camera is successfully initialized");
   }
 
 }

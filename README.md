@@ -6,6 +6,8 @@
 
 - September 1st, 2024: Just decided to add this section to the project. 
 - September 1st, 2024: Bluetooth photo taking failed, working on it.
+- September 5th, 2024: WiFi Connection tested and it works perfectly. 
+- September 5th, 2024: Camera initialized correctly.
 
 ## Repository Guide
 

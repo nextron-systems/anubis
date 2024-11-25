@@ -10,6 +10,7 @@
 - September 5th, 2024: Camera initialized correctly.
 - November 25th, 2024: Camera code with the ability of being online uploaded to the board. 
 - November 26th, 2024: API has been written and tested.
+- November 26th, 2024: API edited for better image file names.
 
 ## Repository Guide
 

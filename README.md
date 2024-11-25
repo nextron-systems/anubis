@@ -8,6 +8,7 @@
 - September 1st, 2024: Bluetooth photo taking failed, working on it.
 - September 5th, 2024: WiFi Connection tested and it works perfectly. 
 - September 5th, 2024: Camera initialized correctly.
+- November 25th, 2024: Camera code with the ability of being online uploaded to the board. 
 
 ## Repository Guide
 

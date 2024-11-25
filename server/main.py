@@ -1,37 +1,35 @@
-from flask import Flask, request, abort
+from flask import Flask, request, abort, jsonify
 import os
 import base64
-from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
 @app.route('/pics', methods=['POST'])
 def upload_pic():
-    # Check if the request contains the correct Content-Type
+    # Check if the request has the correct Content-Type
     if request.content_type != 'image/jpeg':
         abort(400, 'Content-Type must be image/jpeg')
 
-    # Check if the request contains a file
-    if 'file' not in request.files:
-        abort(400, 'No file part')
+    # Read the image data from the request
+    image_data = request.data
 
-    file = request.files['file']
+    if not image_data:
+        abort(400, 'No image data received')
 
-    # Check if the file has a valid filename
-    if file.filename == '':
-        abort(400, 'No selected file')
+    # Generate a base64-encoded filename
+    base64_filename = base64.urlsafe_b64encode(os.urandom(12)).decode('utf-8') + '.jpg'
 
-    # Secure the filename
-    filename = secure_filename(file.filename)
+    # Save the image data to a file
+    file_path = os.path.join('.', base64_filename)  # Save in the current directory
+    with open(file_path, 'wb') as f:
+        f.write(image_data)
 
-    # Encode the filename in base64
-    base64_filename = base64.urlsafe_b64encode(filename.encode()).decode()
-
-    # Save the file to the root directory
-    file_path = os.path.join('/', base64_filename)
-    file.save(file_path)
-
-    return f"File saved as {base64_filename}", 201
+    # Return a success response
+    response = {
+        'status': 'success',
+        'message': f'File saved as {base64_filename}'
+    }
+    return jsonify(response), 201
 
 if __name__ == '__main__':
-    app.run(debug=True, port=9502, host="0.0.0.0")
+    app.run(debug=True)

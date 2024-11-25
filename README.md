@@ -20,6 +20,8 @@
     - `LED` : Experimenting with LED on Pin 4. It was just a basic test, and not even worth sharing.
     - `BLUETOOTH_LED` : Experimenting with bluetooth commands, turning the LED on or off using Bluetooth terminal.
     - `BLUETOOTH_CAMERA` : Experimenting with bluetooth and camera, failed miserably.
+- `server` : A simple implementation of the API 
+    - `main.py` : Just the code for API.
 
 ### Files 
 

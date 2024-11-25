@@ -20,6 +20,9 @@ def upload_pic():
     # Generate a base64-encoded filename
     # base64_filename = base64.urlsafe_b64encode(os.urandom(12)).decode('utf-8') + '.jpg'
 
+    dt_data = datetime.now()
+    final_filename = dt_data
+
     # Save the image data to a file
     file_path = os.path.join('.', base64_filename)  # Save in the current directory
     with open(file_path, 'wb') as f:

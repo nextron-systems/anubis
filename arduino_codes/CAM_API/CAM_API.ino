@@ -2,16 +2,18 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
+#define LED_PIN 4
+
 // Replace with your network credentials
 const char* ssid = "YOUR_SSID";
 const char* password = "YOUR_PASSWORD";
 
 // API endpoint URL
-const char* serverName = "http://example.com/pics";
+const char* serverName = "https://anubis.example.com/pics";
 
 // Timer for taking pictures (in milliseconds)
 unsigned long lastTime = 0;
-unsigned long timerDelay = 600000;  // 10 minutes
+unsigned long timerDelay = 60000;  // 10 minutes
 
 // AI Thinker ESP32-CAM Pin Mapping
 #define PWDN_GPIO_NUM     32
@@ -36,6 +38,9 @@ void setup() {
   // Serial port for debugging purposes
   Serial.begin(115200);
 
+  pinMode(LED_PIN, OUTPUT);
+
+  
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -43,6 +48,7 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
   Serial.println("Connected to WiFi");
+  
 
   // Configure the camera
   camera_config_t config;
@@ -73,7 +79,7 @@ void setup() {
     config.fb_count = 2;
   } else {
     config.frame_size = FRAMESIZE_SVGA; // 800x600
-    config.jpeg_quality = 12;  //0-63 lower number means higher quality
+    config.jpeg_quality = 10;  //0-63 lower number means higher quality
     config.fb_count = 1;
   }
 

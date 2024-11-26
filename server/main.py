@@ -28,7 +28,7 @@ def upload_pic():
     # Return a success response
     response = {
         'status': 'success',
-        'message': f'File saved as {base64_filename}'
+        'message': f'File saved as {final_filename}'
     }
     return jsonify(response), 201
 

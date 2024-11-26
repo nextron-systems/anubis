@@ -18,7 +18,7 @@ def upload_pic():
         abort(400, 'No image data received')
 
     dt_data = datetime.now()
-    final_filename = f"{dt_data.year}{dt_data.month}{dt_data.day}{dt_data.hour}{dt_data.minute}{dt_data.second}.jpg"
+    final_filename = f"{dt_data.year}-{dt_data.month}-{dt_data.day}-{dt_data.hour}:{dt_data.minute}:{dt_data.second}.jpg"
 
     # Save the image data to a file
     file_path = os.path.join('.', final_filename)  # Save in the current directory

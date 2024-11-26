@@ -5,15 +5,15 @@
 #define LED_PIN 4
 
 // Replace with your network credentials
-const char* ssid = "YOUR_SSID";
-const char* password = "YOUR_PASSWORD";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // API endpoint URL
-const char* serverName = "https://anubis.example.com/pics";
+const char* serverName = "https://anubis.mann-e.com/pics";
 
 // Timer for taking pictures (in milliseconds)
 unsigned long lastTime = 0;
-unsigned long timerDelay = 60000;  // 10 minutes
+unsigned long timerDelay = 6000;  // 1 minutes
 
 // AI Thinker ESP32-CAM Pin Mapping
 #define PWDN_GPIO_NUM     32
@@ -43,11 +43,13 @@ void setup() {
   
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
+  digitalWrite(LED_PIN, HIGH);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
   Serial.println("Connected to WiFi");
+  digitalWrite(LED_PIN, LOW);
   
 
   // Configure the camera
@@ -123,6 +125,9 @@ void takeAndSendPicture() {
       String response = http.getString();
       Serial.println(httpResponseCode);
       Serial.println(response);
+      digitalWrite(LED_PIN, HIGH);
+      delay(100);
+      digitalWrite(LED_PIN, LOW);
     }
     else {
       Serial.print("Error on sending POST: ");

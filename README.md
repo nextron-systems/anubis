@@ -1,5 +1,6 @@
 # Anubis 
 
+<p align="center"><img src="anubis-logo.png" width=512 height=512 /></p>
 <p align="center"><strong>AI Device Helping You Remember Your Best Memories</strong></p>
 
 ## Updates 

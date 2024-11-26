@@ -9,7 +9,7 @@ const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
 
 // API endpoint URL
-const char* serverName = "https://anubis.mann-e.com/pics";
+const char* serverName = "https://anubis.example.com/pics";
 
 // Timer for taking pictures (in milliseconds)
 unsigned long lastTime = 0;

@@ -24,6 +24,10 @@
     - `LED` : Experimenting with LED on Pin 4. It was just a basic test, and not even worth sharing.
     - `BLUETOOTH_LED` : Experimenting with bluetooth commands, turning the LED on or off using Bluetooth terminal.
     - `BLUETOOTH_CAMERA` : Experimenting with bluetooth and camera, failed miserably.
+    - `CAM_API` : Taking photos automatically and send them to a flask API. 
+    - `WIFI_CONNECTION` : Attempts of connecting to the WiFi 
+    - `WIFI_CAM` : Camera + WIFI 
+    - `STREAM_CAM` : Endless stream in a local network.
 - `server` : A simple implementation of the API 
     - `main.py` : Just the code for API.
 

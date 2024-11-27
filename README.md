@@ -28,6 +28,7 @@
     - `WIFI_CONNECTION` : Attempts of connecting to the WiFi 
     - `WIFI_CAM` : Camera + WIFI 
     - `STREAM_CAM` : Endless stream in a local network.
+    - `ONLINE_STREAM` : Streaming the videos to the world wide web.
 - `server` : A simple implementation of the API 
     - `main.py` : Just the code for API.
 - `opencv_stream`: A simple test for finding out if it works with OpenCV or not. 

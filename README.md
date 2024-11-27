@@ -13,6 +13,7 @@
 - November 26th, 2024: API has been written and tested.
 - November 26th, 2024: API edited for better image file names.
 - November 26th, 2024: Minor modifications and tests has been done.
+- November 27th, 2024: Added an endless stream functionality.
 
 ## Repository Guide
 

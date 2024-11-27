@@ -30,6 +30,8 @@
     - `STREAM_CAM` : Endless stream in a local network.
 - `server` : A simple implementation of the API 
     - `main.py` : Just the code for API.
+- `opencv_stream`: A simple test for finding out if it works with OpenCV or not. 
+    - `main.py` : Just code for the test.
 
 ### Files 
 
